@@ -5,16 +5,16 @@ public class Main {
         // Initialize a mock BankAccount object (Account No: 1001, Initial Balance: $1500.00, PIN: 4321)
         BankAccount myAccount = new BankAccount(1001, 1500.0, 4321);
 
-        // Inject the account dependency into the ATM user interface[cite: 1]
+        // Inject the account dependency into the ATM user interface
         ATM atmSystem = new ATM(myAccount);
 
-        // Start the application loop[cite: 1]
+        // Start the application loop
         atmSystem.run();
     }
 }
 
 // ==========================================
-// 1. BankAccount Class (Data Vault & Business Logic)[cite: 1]
+// 1. BankAccount Class (Data Vault & Business Logic)
 // ==========================================
 class BankAccount {
     private int accountNumber;
@@ -53,7 +53,7 @@ class BankAccount {
 }
 
 // ==========================================
-// 2. ATM Class (User Interface & Error Handling)[cite: 1]
+// 2. ATM Class (User Interface & Error Handling)
 // ==========================================
 class ATM {
     private BankAccount account;
@@ -141,7 +141,7 @@ class ATM {
         }
     }
 
-    // Error handling for integer inputs to prevent crashes[cite: 1]
+    // Error handling for integer inputs to prevent crashes
     private int getValidatedIntInput(String prompt) {
         if (!prompt.isEmpty()) System.out.print(prompt);
         while (!scanner.hasNextInt()) {
@@ -151,7 +151,7 @@ class ATM {
         return scanner.nextInt();
     }
 
-    // Error handling for double/amount inputs to prevent crashes[cite: 1]
+    // Error handling for double/amount inputs to prevent crashes
     private double getValidatedDoubleInput(String prompt) {
         if (!prompt.isEmpty()) System.out.print(prompt);
         while (!scanner.hasNextDouble()) {
